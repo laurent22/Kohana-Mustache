@@ -1,4 +1,51 @@
-Kohana-Mustache
-===============
+# Kohana-Mustache
 
-A Mustache module for Kohana.
+This is a Mustache module for Kohana. Its particularity is that it works exactly like Kohana regular views, so you don't need to change anything to the way you instanciate views, assign variables to them, etc. You can even mix and match PHP views with Mustache views. If the module doesn't find a mustache view, it will default to a PHP view.
+
+## Usage
+
+1. Add the module to Kohana. Copy the "mustache" folder into the "modules" folder of Kohana
+
+2. Enable the module in bootstrap.php:
+
+	Kohana::modules(array(
+		'mustache'  => MODPATH.'mustache',       // Mustache support in Kohana
+		// 'auth'       => MODPATH.'auth',       // Basic authentication
+		// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
+		// ...
+		));
+
+3. Create a Mustache view. For example, add this file to "application/views/example.mustache":
+
+	{{#user}}
+		Hello {{name}}
+		You have just won ${{value}}!
+		{{#in_ca}}
+		Well, ${{taxed_value}}, after taxes.
+		{{/in_ca}}
+	{{/user}}
+
+4. Finally, to instanciate the view, simply use the usual Kohana syntax:
+
+	$user = array(
+		"name" => "Chris",
+		"value" => 10000,
+		"taxed_value" => 10000 - (10000 * 0.4),
+		"in_ca" => true
+	);
+	
+	$view = View::factory('example');
+	$view->user = $user;
+	echo $view->render();
+	
+Which should display:
+
+	Hello Chris You have just won $10000! Well, $6000, after taxes.
+	
+## Mixing PHP and Mustache view
+
+The module transparently supports mixing PHP and Mustache views. If the module finds a view called "example.mustache", it's going to use that. However, if this file doesn't exist, it's going to look for "example.php" and passes it to Kohana for rendering.
+
+## License
+
+[LGPL3](http://www.gnu.org/licenses/lgpl.html)
