@@ -4,9 +4,9 @@ This is a Mustache module for Kohana. Its particularity is that it works exactly
 
 ## Usage
 
-1. Add the module to Kohana. Copy the "mustache" folder into the "modules" folder of Kohana
+* Add the module to Kohana. Copy the "mustache" folder into the "modules" folder of Kohana
 
-2. Enable the module in bootstrap.php:
+* Enable the module in bootstrap.php:
 
 	Kohana::modules(array(
 		'mustache'  => MODPATH.'mustache',       // Mustache support in Kohana
@@ -15,7 +15,7 @@ This is a Mustache module for Kohana. Its particularity is that it works exactly
 		// ...
 		));
 
-3. Create a Mustache view. For example, add this file to "application/views/example.mustache":
+* Create a Mustache view. For example, add this file to "application/views/example.mustache":
 
 	{{#user}}
 		Hello {{name}}
@@ -25,7 +25,7 @@ This is a Mustache module for Kohana. Its particularity is that it works exactly
 		{{/in_ca}}
 	{{/user}}
 
-4. Finally, to instanciate the view, simply use the usual Kohana syntax:
+* Finally, to instanciate the view, simply use the usual Kohana syntax:
 
 	$user = array(
 		"name" => "Chris",
