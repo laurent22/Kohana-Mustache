@@ -8,6 +8,7 @@ This is a Mustache module for Kohana. Its particularity is that it works exactly
 
 - Enable the module in bootstrap.php:
 
+<!-- -->
 	Kohana::modules(array(
 		'mustache'  => MODPATH.'mustache',       // Mustache support in Kohana
 		// 'auth'       => MODPATH.'auth',       // Basic authentication
@@ -17,6 +18,7 @@ This is a Mustache module for Kohana. Its particularity is that it works exactly
 
 - Create a Mustache view. For example, add this file to "application/views/example.mustache":
 
+<!-- -->
 	{{#user}}
 		Hello {{name}}
 		You have just won ${{value}}!
@@ -27,6 +29,7 @@ This is a Mustache module for Kohana. Its particularity is that it works exactly
 
 - Finally, to instanciate the view, simply use the usual Kohana syntax:
 
+<!-- -->
 	$user = array(
 		"name" => "Chris",
 		"value" => 10000,
