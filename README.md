@@ -2,9 +2,9 @@
 
 This is a [Mustache](http://mustache.github.com/) module for [Kohana](http://kohanaframework.org/). Its particularity is that it works exactly like Kohana regular views, so you don't need to change anything to the way you instantiate views, assign variables to them, etc. You can even mix and match PHP views with Mustache views. If the module doesn't find a mustache view, it will default to a PHP view.
 
-## Supported versions
+## Supported Kohana versions
 
-The module is compatible with Kohana 3.3. For earlier versions, you might have to rename `classes/View.php` to `classes/view.php`.
+The module is compatible with Kohana 3.3. For earlier versions, you might have to rename `classes/View.php` to `classes/view.php` (lowercase).
 
 ## Usage
 
