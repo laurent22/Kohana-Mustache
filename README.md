@@ -51,7 +51,7 @@ Which should display:
 	
 ## Mixing PHP and Mustache view
 
-The module transparently supports mixing PHP and Mustache views. If the module finds a view called `example.mustache`, it's going to use that. However, if this file doesn't exist, it's going to look for `example.php` and passes it to Kohana for rendering.
+The module transparently supports mixing PHP and Mustache views. If the module finds a view called `example.mustache`, it's going to use that. However, if this file doesn't exist, it's going to look for `example.php` and pass it to Kohana for rendering.
 
 ## License
 
