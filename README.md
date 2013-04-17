@@ -2,6 +2,10 @@
 
 This is a [Mustache](http://mustache.github.com/) module for [Kohana](http://kohanaframework.org/). Its particularity is that it works exactly like Kohana regular views, so you don't need to change anything to the way you instantiate views, assign variables to them, etc. You can even mix and match PHP views with Mustache views. If the module doesn't find a mustache view, it will default to a PHP view.
 
+## Supported Kohana versions
+
+The module is compatible with Kohana 3.3. For earlier versions, you might have to rename `classes/View.php` to `classes/view.php` (lowercase).
+
 ## Usage
 
 - Add the module to Kohana. Copy the `mustache` folder into the `modules` folder of Kohana.
@@ -47,7 +51,7 @@ Which should display:
 	
 ## Mixing PHP and Mustache view
 
-The module transparently supports mixing PHP and Mustache views. If the module finds a view called `example.mustache`, it's going to use that. However, if this file doesn't exist, it's going to look for `example.php` and passes it to Kohana for rendering.
+The module transparently supports mixing PHP and Mustache views. If the module finds a view called `example.mustache`, it's going to use that. However, if this file doesn't exist, it's going to look for `example.php` and pass it to Kohana for rendering.
 
 ## License
 
